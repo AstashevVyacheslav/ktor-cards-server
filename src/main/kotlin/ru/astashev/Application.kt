@@ -10,6 +10,7 @@ import ru.astashev.domain.usecase.CardUseCase
 import ru.astashev.domain.usecase.UserUseCase
 import ru.astashev.plugins.DatabaseFactory.initializationDatabase
 import ru.astashev.plugins.configureMonitoring
+import ru.astashev.plugins.configureRouting
 import ru.astashev.plugins.configureSecurity
 import ru.astashev.plugins.configureSerialization
 
@@ -30,5 +31,5 @@ fun Application.module() {
     configureMonitoring()
     configureSerialization()
     configureSecurity(userUseCase)
-//    configureRouting()
+    configureRouting(userUseCase, cardUseCase)
 }
