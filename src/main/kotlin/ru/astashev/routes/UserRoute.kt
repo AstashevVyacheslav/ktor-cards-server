@@ -41,7 +41,7 @@ fun Route.UserRoute(userUseCase: UserUseCase) {
             call.respond(HttpStatusCode.Conflict, BaseResponse(false, e.message ?: Constants.Error.GENERAL))
         }
     }
-
+//работает
 
     post("api/v1/login") {
         val loginRequest = call.receiveNullable<LoginRequest>() ?: kotlin.run {
